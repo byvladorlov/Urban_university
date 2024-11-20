@@ -3,8 +3,8 @@ def send_email(message, recipient,*, sender = "university.help@gmail.com"):
         print("Нельзя отправить письмо самому себе!")
         return
     if (recipient.find("@") == -1 or sender.find("@") == -1 or
-            (recipient.endswith('.com') or recipient.endswith('.ru') or recipient.endswith('.net')) == False
-            or (sender.endswith('.com') or sender.endswith('.ru') or sender.endswith('.net')) == False):
+            recipient.endswith(('.com', '.ru', '.net')) == False
+            or sender.endswith(('.com','.ru', '.net')) == False):
         print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
         return
     if sender in "university.help@gmail.com":
