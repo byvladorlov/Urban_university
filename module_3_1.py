@@ -10,13 +10,8 @@ def string_info(string):
 
 def is_contains(string, list_to_search):
     count_calls()
-    flag = False
     string = string.lower()
-    for i in list_to_search:
-        i = i.lower()
-        if  string in i:
-            flag = True
-    return flag
+    return any(string in i.lower() for i in list_to_search)
 
 print(string_info('Capybara'))
 print(string_info('Armageddon'))
