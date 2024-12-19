@@ -1,6 +1,3 @@
-from xml.sax.handler import property_interning_dict
-
-
 class House:
     def __init__(self, name, number_of_floors):
         self.name = name
